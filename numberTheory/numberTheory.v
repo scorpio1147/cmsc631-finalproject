@@ -1,5 +1,5 @@
-Require Import ZArith.
-Require Import Lia.
+From Stdlib Require Import ZArith.
+From Stdlib Require Import Lia.
 
 Module chinese_remainder_playground.
 Open Scope Z_scope.
