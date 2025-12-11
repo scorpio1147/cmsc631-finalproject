@@ -342,6 +342,10 @@ Proof.
       assumption.
 Qed.
 
+(* the above is kind of like a 'preservation' statement 
+   since it shows that the gcd stays the same after each
+   transition / iteration *)
+
 Lemma gcd_step_decreases :
   forall a b,
     a <> 0 -> b <> 0 ->
@@ -353,6 +357,9 @@ Proof.
     destruct b as [|b']; try assumption. contradiction.
     simpl. destruct (Nat.leb_spec0 a' b') as [Hab | Hba]; lia.
 Qed.
+
+(* the above is kind of like a 'progress' statement 
+   since the a + b argument is always decreasing *)
 
 Lemma divides_refl d :
   d <> 0 -> divides d d.
