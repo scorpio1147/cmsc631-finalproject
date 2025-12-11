@@ -500,7 +500,7 @@ Proof.
   lia. assumption.
 Qed.
 
-Lemma is_gcd_implies_is_egcd :
+Lemma is_egcd_implies_is_gcd :
   forall d a b,
   is_egcd d a b -> is_gcd d a b.
 Proof.
@@ -532,7 +532,7 @@ Proof.
           lia. apply X. apply Y.
 Qed.
 
-Lemma is_egcd_implies_is_gcd :
+Lemma is_gcd_implies_is_egcd :
   forall d a b,
   is_gcd d a b -> is_egcd d a b.
 Proof.
