@@ -85,7 +85,7 @@ Proof.
   exists (c * k). lia.
 Qed.
 
-Lemma coprime_divides_factor :
+Lemma coprime_divides_factor : (* wait this is just euclid's lemma *)
   forall m n k u v,
     u * m + v * n = 1 ->
     divides n (m * k) ->
